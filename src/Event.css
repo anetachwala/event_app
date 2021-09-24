@@ -1,0 +1,18 @@
+.Event {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid #DABFFF;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 0 10px;
+  border-radius: 5px;
+}
+
+.Event p {
+  padding: 0 10px;
+}
+
+.Event_delete {
+  color: #E71D36;
+  cursor: pointer;
+}

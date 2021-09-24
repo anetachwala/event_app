@@ -1,0 +1,43 @@
+.EventForm {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+}
+
+.EventForm h2 {
+  text-align: center;
+}
+
+.EventForm input {
+  margin-bottom: 16px;
+}
+
+.EventForm_button {
+  background: #00A7E1;
+  width: 130px;
+  height: 45px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  color: white;
+  font-size: 20px;
+  padding: 0 8px;
+  margin: 30px 0;
+}
+
+.SubmitForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.SubmitForm input {
+  align-self: flex-end;
+  background: #00A7E1;
+  cursor: pointer;
+  border: none;
+  width: 100px;
+  height: 35px;
+  font-size: 18px;
+  border-radius: 15px;
+  color: white;
+}

@@ -1,11 +1,14 @@
 import './App.css';
+import Header from './Header';
+import EventForm from './EventForm';
+import EventList from './EventList';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        
-      </header>
+      <Header />
+      <EventList />
+      <EventForm />
     </div>
   );
 }
