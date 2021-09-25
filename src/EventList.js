@@ -8,7 +8,7 @@ function EventList() {
   return(
     <div className="EventList">
       {eventsList.map((event, index) => {
-        return <Event name={`${event.fName} ${event.sName}`} email={event.email} date={event.date} index={index} />
+        return <Event key={index} name={`${event.fName} ${event.sName}`} email={event.email} date={event.date} index={index} />
       })
     } 
     </div>

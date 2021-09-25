@@ -1,11 +1,13 @@
 .Event {
   display: flex;
   flex-direction: row;
-  border: 1px solid #DABFFF;
-  width: fit-content;
+  justify-content: space-between;
+  border: 2px solid #DABFFF;
+  width: 600px;
   margin: 0 auto;
   padding: 0 10px;
   border-radius: 5px;
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .Event p {
