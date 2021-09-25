@@ -1,12 +1,19 @@
 import './Event.css';
+import { useSelector, useDispatch } from 'react-redux';
+import { removeEvent } from './actions';
 
-function Event() {
+function Event(props) {
+  const dispatch = useDispatch();
+  const handleDelete = () => {
+    dispatch(removeEvent(props.index));
+  };
+
   return(
     <div className="Event">
-      <p>Adda Bunna</p>
-      <p>email@email.com</p>
-      <p>2021-11-12</p>
-      <p className="Event_delete">delete</p>
+      <p>{props.name}</p>
+      <p>{props.email}</p>
+      <p>{props.data}</p>
+      <p className="Event_delete" onClick={handleDelete}>delete</p>
     </div>
   );
 }

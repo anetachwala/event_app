@@ -1,12 +1,16 @@
 import React from 'react';
 import Event from './Event';
 import './EventList.css';
-
+import { useSelector } from 'react-redux';
 
 function EventList() {
+  const eventsList = useSelector(state => state);
   return(
     <div className="EventList">
-      <Event />
+      {eventsList.map((event, index) => {
+        return <Event name={`${event.fName} ${event.sName}`} email={event.email} date={event.date} index={index} />
+      })
+    } 
     </div>
   );
 
