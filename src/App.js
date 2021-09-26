@@ -1,7 +1,7 @@
-import './App.css';
-import Header from './Header';
-import EventForm from './EventForm';
-import EventList from './EventList';
+import "./App.css";
+import Header from "./Header";
+import EventForm from "./EventForm";
+import EventList from "./EventList";
 
 function App() {
   return (

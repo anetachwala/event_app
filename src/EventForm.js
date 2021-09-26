@@ -1,24 +1,23 @@
-import React from 'react';
-import Modal from 'react-modal';
-import './EventForm.css';
-import { useDispatch } from 'react-redux';
-import { addEvent } from './actions';
-
+import React from "react";
+import Modal from "react-modal";
+import "./EventForm.css";
+import { useDispatch } from "react-redux";
+import { addEvent } from "./actions";
 
 const customStyles = {
   content: {
-    top: '50%',
-    left: '50%',
-    right: '80%',
-    bottom: 'auto',
+    top: "50%",
+    left: "50%",
+    right: "80%",
+    bottom: "auto",
     width: "400px",
-    transform: 'translate(-50%, -50%)',
-    background: '#424B54',
-    borderRadius: "25px"
+    transform: "translate(-50%, -50%)",
+    background: "#424B54",
+    borderRadius: "25px",
   },
 };
 
-Modal.setAppElement('#root');
+Modal.setAppElement("#root");
 
 function EventForm() {
   const [modalIsOpen, setIsOpen] = React.useState(false);
@@ -28,9 +27,9 @@ function EventForm() {
   const handleSubmit = (event) => {
     event.preventDefault();
     const formData = new FormData(event.currentTarget);
-    const arr = []
+    const arr = [];
     for (let [key, value] of formData.entries()) {
-      arr.push([key, value])
+      arr.push([key, value]);
     }
     const entries = new Map(arr);
     eventObject = Object.fromEntries(entries);
@@ -40,15 +39,21 @@ function EventForm() {
 
   const openModal = () => {
     setIsOpen(true);
-  }
+  };
 
   const closeModal = () => {
     setIsOpen(false);
-  }
+  };
 
-  return(
+  return (
     <div>
-      <button data-cy="AddEvent" className="EventForm_button" onClick={openModal}>+ Add event</button>
+      <button
+        data-cy="AddEvent"
+        className="EventForm_button"
+        onClick={openModal}
+      >
+        + Add event
+      </button>
       <Modal
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
@@ -64,7 +69,14 @@ function EventForm() {
           <input data-cy="Email" type="email" name="email" required />
           <label>Event date</label>
           <input data-cy="Date" type="date" name="date" required />
-          <div className="SubmitForm"><input data-cy="SubmitForm" type="submit" id="submit" value="Save" /></div>
+          <div className="SubmitForm">
+            <input
+              data-cy="SubmitForm"
+              type="submit"
+              id="submit"
+              value="Save"
+            />
+          </div>
         </form>
       </Modal>
     </div>

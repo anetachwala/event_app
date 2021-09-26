@@ -1,6 +1,6 @@
-import './Event.css';
-import { useDispatch } from 'react-redux';
-import { removeEvent } from './actions';
+import "./Event.css";
+import { useDispatch } from "react-redux";
+import { removeEvent } from "./actions";
 
 function Event(props) {
   const dispatch = useDispatch();
@@ -8,12 +8,14 @@ function Event(props) {
     dispatch(removeEvent(props.index));
   };
 
-  return(
+  return (
     <div data-cy="Event" className="Event">
       <p>{props.name}</p>
       <p>{props.email}</p>
       <p>{props.date}</p>
-      <p data-cy="DeleteEvent" className="Event_delete" onClick={handleDelete}>delete</p>
+      <p data-cy="DeleteEvent" className="Event_delete" onClick={handleDelete}>
+        delete
+      </p>
     </div>
   );
 }
