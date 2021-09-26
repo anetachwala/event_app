@@ -18,5 +18,8 @@ You will also see any lint errors in the console.
 
 Launches the test runner in the interactive watch mode.\
 More about running cypress tests here: (https://docs.cypress.io/guides/guides/command-line#cypress-open).
+In the cypress window open '\_spec.js' file to run tests.
 
+### `npm install`
 
+Install all dependencies necessary to run the app and tests.
