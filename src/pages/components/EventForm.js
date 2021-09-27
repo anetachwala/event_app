@@ -1,8 +1,8 @@
 import React from "react";
 import Modal from "react-modal";
-import "./EventForm.css";
+import "../../style/EventForm.css";
 import { useDispatch } from "react-redux";
-import { addEvent } from "./actions";
+import { addEvent } from "../../store/actions";
 
 const customStyles = {
   content: {

@@ -1,6 +1,6 @@
-import "./Event.css";
+import "../../style/Event.css";
 import { useDispatch } from "react-redux";
-import { removeEvent } from "./actions";
+import { removeEvent } from "../../store/actions";
 
 function Event(props) {
   const dispatch = useDispatch();

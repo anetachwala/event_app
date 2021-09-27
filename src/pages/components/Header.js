@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import "./Header.css";
+import "../../style/Header.css";
 
 function Header() {
   const number = useSelector((state) => state.length);

@@ -1,6 +1,6 @@
 import React from "react";
 import Event from "./Event";
-import "./EventList.css";
+import "../../style/EventList.css";
 import { useSelector } from "react-redux";
 
 function EventList() {
