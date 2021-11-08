@@ -22,4 +22,4 @@ In the cypress window open '\_spec.js' file to run tests.
 
 ### `npm install`
 
-Install all dependencies necessary to run the app and tests.
+Installs all dependencies necessary to run the app and tests.

@@ -21,19 +21,17 @@ Modal.setAppElement("#root");
 
 function EventForm() {
   const [modalIsOpen, setIsOpen] = React.useState(false);
-  let eventObject = {};
   const dispatch = useDispatch();
-
   const handleSubmit = (event) => {
     event.preventDefault();
-    const formData = new FormData(event.currentTarget);
-    const arr = [];
-    for (let [key, value] of formData.entries()) {
-      arr.push([key, value]);
-    }
-    const entries = new Map(arr);
-    eventObject = Object.fromEntries(entries);
-    dispatch(addEvent(eventObject));
+    const { fName, sName, email, date } = event.target.elements;
+    const obj = {
+      fName: fName.value,
+      sName: sName.value,
+      email: email.value,
+      date: date.value,
+    };
+    dispatch(addEvent(obj));
     closeModal();
   };
 
